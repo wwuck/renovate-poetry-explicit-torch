@@ -1,0 +1,20 @@
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core"]
+
+[tool.poetry]
+authors = ["Your Name <you@example.com>"]
+description = ""
+license = "MIT"
+name = "renovate-poetry-explicit-torch"
+readme = "README.md"
+version = "0.1.0"
+
+[tool.poetry.dependencies]
+python = "~3.12.1"
+torch = {platform = "linux", source = "torch-cpu-nightly", allow-prereleases = true, version = "2.3.0.dev20231220+cpu"}
+
+[[tool.poetry.source]]
+name = "torch-cpu-nightly"
+priority = "explicit"
+url = "https://download.pytorch.org/whl/nightly/cpu"
